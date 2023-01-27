@@ -1,4 +1,4 @@
-package cn.repigeons.commons.redisTemplate
+package cn.repigeons.commons.redisService
 
 import org.springframework.data.redis.core.RedisTemplate
 import java.util.concurrent.TimeUnit

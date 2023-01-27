@@ -1,5 +1,8 @@
 package cn.repigeons.commons.httpTrace
 
+import jakarta.servlet.FilterChain
+import jakarta.servlet.http.HttpServletRequest
+import jakarta.servlet.http.HttpServletResponse
 import org.slf4j.LoggerFactory
 import org.springframework.core.Ordered
 import org.springframework.http.HttpStatus
@@ -13,9 +16,6 @@ import java.net.URI
 import java.net.URISyntaxException
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
-import javax.servlet.FilterChain
-import javax.servlet.http.HttpServletRequest
-import javax.servlet.http.HttpServletResponse
 
 class HttpTraceLogFilter : OncePerRequestFilter(), Ordered {
     private val log = LoggerFactory.getLogger(javaClass)
@@ -23,7 +23,7 @@ class HttpTraceLogFilter : OncePerRequestFilter(), Ordered {
     override fun doFilterInternal(
         httpRequest: HttpServletRequest,
         httpResponse: HttpServletResponse,
-        filterChain: FilterChain
+        filterChain: FilterChain,
     ) {
         var request = httpRequest
         var response = httpResponse

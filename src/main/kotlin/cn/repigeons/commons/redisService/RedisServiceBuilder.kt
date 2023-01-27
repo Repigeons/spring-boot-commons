@@ -1,13 +1,15 @@
-package cn.repigeons.commons.redisTemplate
+package cn.repigeons.commons.redisService
 
 import org.springframework.data.redis.core.RedisTemplate
 
+@Suppress("unused")
 class RedisServiceBuilder {
-    lateinit var redisTemplate: RedisTemplate<String, Any>
-        private set
+    private lateinit var redisTemplate: RedisTemplate<String, Any>
 
+    @Suppress("unused")
     fun redisTemplate(redisTemplate: RedisTemplate<String, Any>) =
         apply { this.redisTemplate = redisTemplate }
 
+    @Suppress("unused")
     fun build(): RedisService = RedisServiceImpl(redisTemplate)
 }

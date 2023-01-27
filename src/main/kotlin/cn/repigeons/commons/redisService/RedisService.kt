@@ -1,4 +1,4 @@
-package cn.repigeons.commons.redisTemplate
+package cn.repigeons.commons.redisService
 
 interface RedisService {
     operator fun get(key: String): Any?

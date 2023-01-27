@@ -7,10 +7,10 @@
  */
 
 group = "cn.repigeons"
-version = "0.1.0-RELEASE"
+version = "1.0.0-RELEASE"
 
 plugins {
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "1.8.0"
     `maven-publish`
 }
 
@@ -18,21 +18,22 @@ dependencies {
     // Align versions of all Kotlin components
     implementation(platform(kotlin("bom")))
     // Use the Kotlin JDK 8 standard library.
-    api(kotlin("stdlib-jdk8"))
+    api(kotlin("stdlib"))
     // Use the Kotlin test library.
     testImplementation(kotlin("test"))
     // Use the Kotlin JUnit integration.
     testImplementation(kotlin("test-junit"))
 
     // Project dependencies
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.0")
-    implementation("com.google.code.gson:gson:2.10")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // CompileOnly
-    compileOnly("org.apache.tomcat.embed:tomcat-embed-core:9.0.69")
-    compileOnly("org.springframework.data:spring-data-redis:2.7.5")
-    compileOnly("org.springframework:spring-context:5.3.24")
-    compileOnly("org.springframework:spring-web:5.3.24")
+    compileOnly("org.apache.tomcat.embed:tomcat-embed-core:10.1.5")
+    compileOnly("org.springframework.boot:spring-boot:3.0.1")
+    compileOnly("org.springframework.data:spring-data-redis:3.0.1")
+    compileOnly("org.springframework:spring-context:6.0.4")
+    compileOnly("org.springframework:spring-web:6.0.4")
     compileOnly("com.github.pagehelper:pagehelper:5.3.2")
 }
 
