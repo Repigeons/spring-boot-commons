@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "redis",
+      "type": "cn.repigeons.commons.redisCache.RedisCacheProperties",
+      "sourceType": "cn.repigeons.commons.redisCache.RedisCacheProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "redis.prefix",
+      "type": "java.lang.String",
+      "sourceType": "cn.repigeons.commons.redisCache.RedisCacheProperties",
+      "defaultValue": "spring-cache"
+    },
+    {
+      "name": "redis.key",
+      "type": "java.util.Map<java.lang.String, java.lang.String>",
+      "sourceType": "cn.repigeons.commons.redisCache.RedisCacheProperties"
+    },
+    {
+      "name": "redis.expire",
+      "type": "java.util.Map<java.lang.String, java.time.Duration>",
+      "sourceType": "cn.repigeons.commons.redisCache.RedisCacheProperties"
+    }
+  ]
+}

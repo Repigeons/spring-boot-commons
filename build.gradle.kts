@@ -7,7 +7,7 @@
  */
 
 group = "cn.repigeons"
-version = "1.0.0-RELEASE"
+version = "1.0.1-RELEASE"
 
 plugins {
     kotlin("jvm") version "1.8.0"
@@ -35,12 +35,27 @@ dependencies {
     compileOnly("org.springframework:spring-context:6.0.4")
     compileOnly("org.springframework:spring-web:6.0.4")
     compileOnly("com.github.pagehelper:pagehelper:5.3.2")
+
+    // annotationProcessor
+    annotationProcessor("org.springframework.boot:spring-boot-autoconfigure-processor:3.0.1")
+    implementation("org.springframework.boot:spring-boot-autoconfigure:3.0.1")
 }
 
 publishing {
+    val sourceJar = tasks.register("sourcesJar", Jar::class) {
+        sourceSets.all { from(allSource) }
+        archiveClassifier.convention("sources")
+        archiveClassifier.set("sources")
+    }
+    val javadocJar = tasks.register("javadocJar", Jar::class) {
+        archiveClassifier.convention("javadoc")
+        archiveClassifier.set(name)
+    }
     publications {
         create<MavenPublication>("maven") {
             from(components["kotlin"])
+            artifact(sourceJar)
+            artifact(javadocJar)
         }
     }
     repositories {
