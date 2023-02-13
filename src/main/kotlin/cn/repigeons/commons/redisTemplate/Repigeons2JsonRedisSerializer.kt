@@ -116,7 +116,7 @@ class Repigeons2JsonRedisSerializer<T : Any> : RedisSerializer<T> {
             }
             return mutableMapOf(*pairs.toTypedArray())
         }
-        return deserializeObject(data)
+        return transfer(data, clazz)
     }
 
     private fun <T : Any> transfer(src: Any, type: Class<T>): T {
