@@ -7,7 +7,7 @@
  */
 
 group = "cn.repigeons"
-version = "1.0.2-SNAPSHOT"
+version = "1.0.2-RELEASE"
 
 plugins {
     kotlin("jvm") version "1.8.0"
