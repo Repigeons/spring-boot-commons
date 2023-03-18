@@ -1,3 +1,0 @@
-cn.repigeons.commons.redisCache.RedisCacheAutoConfiguration
-cn.repigeons.commons.redisService.RedisServiceAutoConfiguration
-cn.repigeons.commons.utils.SpringUtils

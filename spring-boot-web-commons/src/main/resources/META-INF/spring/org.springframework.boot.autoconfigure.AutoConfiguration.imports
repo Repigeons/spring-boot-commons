@@ -1,0 +1,2 @@
+cn.repigeons.web.httpTrace.ServletTraceLogFilter
+cn.repigeons.web.restTemplate.RestTemplateAutoConfiguration

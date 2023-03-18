@@ -1,0 +1,2 @@
+cn.repigeons.cache.redis.redisCache.RedisCacheAutoConfiguration
+cn.repigeons.cache.redis.redisService.RedisServiceAutoConfiguration

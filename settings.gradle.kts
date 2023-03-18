@@ -8,3 +8,7 @@
  */
 
 rootProject.name = "spring-boot-commons"
+include("spring-boot-commons-core")
+include("spring-boot-cache")
+include("spring-boot-web-commons")
+include("spring-boot-webflux-commons")
